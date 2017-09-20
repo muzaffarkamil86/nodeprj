@@ -1,7 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-
+const port = process.env.PORT || 8000 ;
 var app = express();
 
 app.use(express.static(__dirname +'/public'));
@@ -53,4 +53,6 @@ app.set('view engine','hbs');
     });
  });
 
-app.listen(8000);
+app.listen(port,()=>{
+    console.log(`Server is running on port ${port} `);
+});
