@@ -53,6 +53,13 @@ app.set('view engine','hbs');
     });
  });
 
+ app.get('/portfolio',(req,res)=>{
+     res.render('portfolio.hbs',{
+         title:'Portfolio',
+         content:'My Portfolio page'
+     });
+ });
+
 app.listen(port,()=>{
     console.log(`Server is running on port ${port} `);
 });
